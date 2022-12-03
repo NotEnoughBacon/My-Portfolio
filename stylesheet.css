@@ -1,6 +1,8 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --white: white;
+    --darkp: rgba(16, 14, 46, 0.885);
+    --lightp: rgba(148, 142, 231, 0.885);
     margin: 0;
     padding: 0;
 }
@@ -12,17 +14,17 @@ html {
     background-color: rgb(213, 213, 213);
 }
 
-header {
-    background-color: rgba(16, 14, 46, 0.885);
+a {
+    color: inherit;
+}
+
+.header {
+    background-color: var(--darkp);
     top: 0;
     border-radius: 0 0 10px 10px;
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-}
-
-a {
-    color: inherit;
 }
 
 .img-header {
@@ -56,26 +58,51 @@ a {
 
 .header-list li > a:hover {
     text-decoration: none;
-    color: rgba(148, 142, 231, 0.885);
+    color: var(--lightp);
     transition: .2s;
 }
 
 #fswd {
     font-size: 16px;
 }
-
-
-@media screen and (max-width: 992px) {
-
+/* Sets the first mini-header to be in the center of everything, and sets my colors to the variables i set at the top */
+.aboutme {
+   border: 4px solid var(--darkp); 
+   margin-top: 40px;
+   width: 50%;
+   text-align: center;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 40%;
+   padding: 20px;
+   color: var(--lightp);
+   font-size: 22px;
 }
 
+.article {
+    margin: 30px;
+    line-break: auto;
+}
+
+/* Sets the font size bigger with more separation when viewed on a desktop */
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+}
+/* This sets, when the width of device is less than 768px wide */
 @media screen and (max-width:768px) {
+    /* This removes the picture to help avoid too much content */
     .brotherpic {
         display: none;
     }
+    /* This sets the nav menu options to be inline with the header text */
     .header {
         flex-direction: column;
     }
+    /* Adding some margin to help it space more evenly */
     .header-list {
         margin: 5px;
     }
