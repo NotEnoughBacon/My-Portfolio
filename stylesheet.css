@@ -1,3 +1,5 @@
+/* Here I set some variables for colors so I can use them later without repeating the rgb. */
+
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --white: white;
@@ -7,6 +9,8 @@
     margin: 0;
     padding: 0;
 }
+
+/* I set tge height and width for the users device, add a scroll behavior to make it seem less cluncky, and remove the side scrolling bar. */
 
 html {
     height: 100%;
@@ -25,6 +29,8 @@ body {
     flex-direction: column;
 }
 
+/* I set the header to the very top, use one of my color vars, set my flexbox for the header, and add a slight round to the bottom of the header */
+
 .header {
     background-color: var(--darkp);
     top: 0;
@@ -40,6 +46,8 @@ body {
     width: 15%;
 }
 
+/* setting the img size, and border around it*/
+
 .brotherpic {
     margin: 3%;
     border-radius: 30px;
@@ -51,6 +59,8 @@ body {
     margin-top: 20px;
     text-align: center;
 }
+
+/* Here is where i set my nav menu, using my vars for color, aligning them in the correct position using flex, some margin, and adding a slight transition so that when you over it transitions smoothly */
 
 .header-list {
     list-style: none;
@@ -94,6 +104,8 @@ body {
     line-break: auto;
 }
 
+/* Very similar to the body headers, just adjusting colors/size to better fit the webpage */
+
 .workheader {
     border: 4px solid var(--darkp);
     margin: 16px;
@@ -108,6 +120,8 @@ body {
 .workimg {
     width: 100%;
 }
+
+/* setting my form options, making sure to get rid of the god awful yellow outline */
 
 .form {
     margin: 10px;
@@ -128,7 +142,7 @@ input:focus {
     color: var(--white);
     text-align: center;
 }
-
+ 
 .icon {
     width: 50px;
     height: 50px;
